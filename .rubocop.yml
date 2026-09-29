@@ -1,0 +1,45 @@
+AllCops:
+  NewCops: enable
+  TargetRubyVersion: 3.2
+  SuggestExtensions: false
+  Exclude:
+    - vendor/**/*
+    - tmp/**/*
+    - pkg/**/*
+
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
+
+Style/Documentation:
+  Enabled: false
+
+Style/Send:
+  Enabled: false
+
+Metrics/AbcSize:
+  Max: 45
+
+Metrics/BlockLength:
+  Exclude:
+    - spec/**/*
+
+Metrics/ClassLength:
+  Max: 250
+
+Metrics/CyclomaticComplexity:
+  Max: 20
+
+Metrics/MethodLength:
+  Max: 30
+
+Metrics/ParameterLists:
+  Max: 15
+
+Metrics/PerceivedComplexity:
+  Max: 20
+
+Layout/LineLength:
+  Max: 120
+
+Layout/MultilineMethodCallIndentation:
+  EnforcedStyle: indented
