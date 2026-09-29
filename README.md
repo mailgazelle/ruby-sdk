@@ -11,7 +11,7 @@ The HTTP contract lives in [docs/api.md](docs/api.md). Keep that file and this g
 - Ruby 3.2 or newer
 - A Mail Gazelle API token for a product that is ready to send (`tes_…`)
 
-There are no runtime gem dependencies. Rails is not required. The ActionMailer delivery method loads only when the host application has already loaded Rails.
+The only runtime gem dependency is `base64`, which ships with Ruby. It is declared so Ruby 3.4 and newer do not warn when attachments are encoded. Rails is not required. The ActionMailer delivery method loads only when the host application has already loaded Rails.
 
 ## Install
 
@@ -257,7 +257,7 @@ The published gem is [mailgazelle on RubyGems](https://rubygems.org/gems/mailgaz
 
 ```bash
 gem build mailgazelle.gemspec
-gem push mailgazelle-1.0.0.gem
+gem push mailgazelle-1.0.1.gem
 ```
 
 `gem push` asks for the API key the first time and stores it in `~/.gem/credentials`. The first successful push reserves the name `mailgazelle` for that account. A version that has been pushed cannot be uploaded again, including after a yank.

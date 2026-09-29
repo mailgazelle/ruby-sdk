@@ -13,6 +13,8 @@ Gem::Specification.new do |spec|
   spec.license = "MIT"
   spec.required_ruby_version = ">= 3.2"
 
+  spec.add_dependency "base64"
+
   spec.files = Dir["lib/**/*", "docs/**/*", "LICENSE", "README.md", "CHANGELOG.md"]
   spec.require_paths = ["lib"]
 
